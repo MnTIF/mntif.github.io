@@ -167,7 +167,7 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(../img/intro-bw-bg.jpg) no-repeat bottom center scroll;
+    background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -181,10 +181,10 @@ a:focus {
 }
 
 .intro .intro-body .brand-logo {
-    background: url(../img/shield.png) no-repeat center center scroll;
+    background: url(../img/mnt-small.png) no-repeat center center scroll;
     background-size: contain;
     width: auto;
-    height: 100px;
+    height: 200px;
     margin: 25px 0;
 }
 
