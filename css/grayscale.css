@@ -73,19 +73,16 @@ a:focus {
 }
 
 .navbar-custom .navbar-header {
-    width: 75%;
+    width: 100%;
     display: block;
 }
 
 .navbar-custom .navbar-brand {
     font-weight: 900;
-    width: 100%;
     vertical-align: center;
     padding: 0;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
-
-
 
 .navbar-custom .navbar-brand .navbar-text {
     order: 2;
@@ -142,10 +139,19 @@ a:focus {
         transition: background .5s ease-in-out,padding .5s ease-in-out;
     }
 
+    .navbar-custom .navbar-header {
+        width: 50%;
+        display: block;
+    }
+
+    .navbar-brand {
+        width: 100%;
+    }
+
     .navbar-custom .navbar-brand .navbar-image {
         background: url(../img/mnt-if-white.png) no-repeat center center scroll;
         background-size: contain;
-        width:20%;
+        width:30%;
         height: 40px;
         float: left;
         margin: 3px 0 0 15px;
@@ -168,7 +174,7 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(../img/intro-bg-90.png) no-repeat bottom center scroll;
+    background: url(../img/intro-bg-50.png) no-repeat bottom center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -294,18 +300,14 @@ a:focus {
 .content-section {
     width:100%;
     margin: 0;
-    padding-top: 100px;
-}
-
-#about {
-    background-color: rgba(143, 54, 57, 1);
+    padding: 50px 0;
 }
 
 .download-section {
     width: 100%;
-    padding: 50px 0;
     color: #fff;
-    background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
+    padding: 50px 0;
+    background: url(../img/crest.jpg) no-repeat center center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -314,31 +316,38 @@ a:focus {
 }
 
 #download {
+    padding: 0;
+}
+
+.red {
     background-color: rgba(143, 54, 57, 1);
 }
 
-#contact {
+.black {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.blue {
     background-color: rgba(21, 40, 69, 1);  
-    padding-bottom: 100px; 
+    padding: 50px 0; 
 }
 
 #map {
     width: 100%;
     height: 200px;
-    background-color: rgba(21, 40, 69, 1);
 }
 
 @media(min-width:767px) {
     .content-section {
-        padding-top: 250px;
+        padding: 125px 0;
     }
 
     .download-section {
-        padding: 100px 0;
+        padding: 125px 0;
     }
 
     #contact {
-        padding-bottom: 250px;
+        padding: 125px 0;
     }
 
     #map {
@@ -368,6 +377,40 @@ a:focus {
     outline: 0;
     color: #000;
     background-color: #eee;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #eee;
+    color: #eee;
+    background-color: transparent;
+}
+.btn-file:hover,
+.btn-file:focus {
+    border: 1px solid #eee;
+    outline: 0;
+    color: #000;
+    background-color: #eee;
+}
+
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    background: red;
+    cursor: inherit;
+    display: block;
+}
+input[readonly] {
+    background-color: white !important;
+    cursor: text !important;
 }
 
 ul.banner-social-buttons {
