@@ -30,48 +30,58 @@ $('.navbar-collapse ul li a').click(function() {
 });
 
 $(document).ready(function() {
-    $('.apply').bootstrapValidator({
-        container: 'tooltip',
-        feedbackIcons: {
-            valid: 'fa fa-check',
-            invalid: 'fa fa-times',
-            validating: 'fa fa-refresh'
-        },
-        live: 'enabled',
-        fields: {
-            inputventure: {
-                message: 'The venture name is not valid',
-                validators: {
-                    notEmpty: {
-                        message: 'The venture name is required and cannot be empty'
-                    },
-                    stringLength: {
-                        min: 6,
-                        max: 30,
-                        message: 'The username must be more than 6 and less than 30 characters long'
-                    }
-                }
+    $('.apply')
+        .bootstrapValidator({
+            container: 'popover',
+            feedbackIcons: {
+                valid: 'fa fa-check',
+                invalid: 'fa fa-times',
+                validating: 'fa fa-refresh'
             },
-            inputcontact: {
-                message: 'The contact name is not valid',
-                validators: {
-                    notEmpty: {
-                        message: 'The contact name is required and cannot be empty'
+            live: 'enabled',
+            fields: {
+                inputventure: {
+                    message: 'The venture name is not valid',
+                    validators: {
+                        notEmpty: {
+                            message: 'The venture name is required and cannot be empty'
+                        }
                     }
-                }
-            },
-            inputemail: {
-                validators: {
-                    notEmpty: {
-                        message: 'The email is required and cannot be empty'
-                    },
-                    emailAddress: {
-                        message: 'The input is not a valid email address'
+                },
+                inputcontact: {
+                    message: 'The contact name is not valid',
+                    validators: {
+                        notEmpty: {
+                            message: 'The contact name is required and cannot be empty'
+                        }
+                    }
+                },
+                inputemail: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The email is required and cannot be empty'
+                        },
+                        emailAddress: {
+                            message: 'The input is not a valid email address'
+                        }
                     }
                 }
             }
-        }
-    });
+        })
+        .on('success.form.bv', function(e){
+            e.preventDefault();
+
+            var $form = $(e.target);
+
+            var bv = $form.data('bootstrapValidator');
+
+            console.log(bv);
+
+            // Use Ajax to submit form data
+            $.post($form.attr('action'), $form.serialize(), function(result) {
+                
+            }, 'json');
+        });
 });
 
 // Google Maps Scripts
