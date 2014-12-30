@@ -8,7 +8,7 @@ body {
     width: 100%;
     height: 100%;
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 100;
+    font-weight: 400;
     color: #fff;
     background-color: #000;
 }
@@ -128,6 +128,10 @@ a:focus {
     background-color: rgba(255,255,255,.3);
 }
 
+.navbar-text {
+    margin-left:40px;
+}
+
 @media(min-width:767px) {
     .navbar {
         padding: 20px 0;
@@ -155,6 +159,10 @@ a:focus {
         height: 40px;
         float: left;
         margin: 3px 0 0 15px;
+    }
+
+    .navbar-text {
+        display:none;
     }
 
     .top-nav-collapse {
@@ -377,6 +385,44 @@ a:focus {
     outline: 0;
     color: #000;
     background-color: #eee;
+}
+
+.btn-primary {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #eee;
+    color: #eee;
+    background-color: transparent;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+    border: 1px solid #eee;
+    outline: 0;
+    color: #000;
+    background-color: #eee;
+}
+
+.btn-primary[disabled],
+.btn-primary[disabled]:hover {
+    border: 1px solid #eee;
+    outline: 0;
+    color: #000;
+    background-color: #eee;
+}
+
+.btn-primary input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    background: red;
+    cursor: inherit;
+    display: block;
 }
 
 .btn-file {

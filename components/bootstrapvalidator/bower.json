@@ -1,0 +1,48 @@
+{
+  "name": "bootstrapvalidator",
+  "description": "The best jQuery plugin to validate form fields. Designed to use with Bootstrap 3",
+  "version": "0.5.3",
+  "ignore": [
+    "demo",
+    "screenshots",
+    "test",
+    "vendor",
+    "*.md",
+    "bootstrapValidator.jquery.json",
+    "Gruntfile.js",
+    "package.json"
+  ],
+  "main": [
+    "dist/css/bootstrapValidator.css",
+    "dist/js/bootstrapValidator.js"
+  ],
+  "license": "http://bootstrapvalidator.com/license/",
+  "keywords": [
+    "jQuery",
+    "plugin",
+    "validate",
+    "validator",
+    "form",
+    "Bootstrap"
+  ],
+  "authors": [
+    {
+      "name": "Nguyen Huu Phuoc",
+      "email": "phuoc@huuphuoc.me",
+      " homepage": "https://twitter.com/nghuuphuoc"
+    }
+  ],
+  "homepage": "http://bootstrapvalidator.com",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nghuuphuoc/bootstrapvalidator.git"
+  },
+  "dependencies": {
+    "jquery": ">= 1.9.1",
+    "bootstrap": ">= 3.0.0"
+  },
+  "gitHead": "8d8eb4f554bec2687fe6f0cb9349d577a1e67872",
+  "readme": "# BootstrapValidator - [v0.5.3](http://bootstrapvalidator.com/download/)\n\n[http://bootstrapvalidator.com](http://bootstrapvalidator.com) - The best [jQuery](http://jquery.com/) plugin to validate form fields, designed to use with [Bootstrap 3](http://getbootstrap.com).\n\nIt's developed from scratch by [@nghuuphuoc](http://twitter.com/nghuuphuoc).\n\n__Required__: [jQuery 1.9.1+](http://jquery.com/) and [Bootstrap 3+](http://getbootstrap.com/)\n\n![Screenshot](screenshots/demo.gif)\n\n## Live demo\n\nhttp://bootstrapvalidator.com/examples/\n\nThere are also many examples located in the [demo](demo) directory.\n\nYou also can run the ```demo``` locally by:\n\n* Clone the repo: \n\n```\ngit clone https://github.com/nghuuphuoc/bootstrapvalidator.git\n```\n\n* Go to the cloned directory and run the command: \n\n```\npython -m SimpleHTTPServer 8000\n```\n\n* Access the demo at \n\n```\nhttp://localhost:8000/demo/the_demo_file_here.html\n```\n\n## Features\n\nSee [official website](http://bootstrapvalidator.com) for the full list of features\n\n## Download\n\n* Latest version: [v0.5.3](http://bootstrapvalidator.com/download/), released on 2014-11-05\n* For older versions, look at the [Releases](https://github.com/nghuuphuoc/bootstrapvalidator/releases) page\n* Release History: Look at the [Change Log](CHANGELOG.md)\n\n## Documentation\n\n* [Official website](http://bootstrapvalidator.com)\n\n## Author\n\nThe __BootstrapValidator__ plugin is written by Nguyen Huu Phuoc, aka @nghuuphuoc\n\n* [http://twitter.com/nghuuphuoc](http://twitter.com/nghuuphuoc)\n* [http://github.com/nghuuphuoc](http://github.com/nghuuphuoc)\n\n## License\n\nBootstrapValidator is free to use in non-commercial projects and applications under the terms of the [Creative Commons BY-NC-ND 3.0](http://creativecommons.org/licenses/by-nc-nd/3.0/) license.\n\nBootstrapValidator may be used in commercial projects and applications with the one-time purchase of a commercial license. \nIf you are paid to do your job, and part of your job is implementing BootstrapValidator, a commercial license is required.\n\nFor more information about the license, see http://bootstrapvalidator.com/license/",
+  "readmeFilename": "README.md",
+  "_id": "bootstrapvalidator@0.5.3"
+}
