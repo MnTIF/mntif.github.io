@@ -8,7 +8,7 @@ body {
     width: 100%;
     height: 100%;
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     color: #fff;
     background-color: #000;
 }
@@ -35,12 +35,18 @@ p {
     margin: 0 0 25px;
     font-size: 18px;
     line-height: 1.5;
+    font-weight: 300;
+}
+
+strong {
+    font-weight:700;
+
 }
 
 @media(min-width:767px) {
     p {
         margin: 0 0 35px;
-        font-size: 20px;
+        font-size: 23px;
         line-height: 1.6;
     }
 }
@@ -311,7 +317,7 @@ a:focus {
     padding: 50px 0;
 }
 
-.download-section {
+.crest-section {
     width: 100%;
     color: #fff;
     padding: 50px 0;
@@ -323,7 +329,7 @@ a:focus {
     -o-background-size: cover;
 }
 
-#download {
+#crest {
     padding: 0;
 }
 
@@ -333,6 +339,11 @@ a:focus {
 
 .black {
     background-color: rgba(0, 0, 0, 1);
+}
+
+.white {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0 , 0, 0, 1);
 }
 
 .blue {
@@ -350,7 +361,7 @@ a:focus {
         padding: 125px 0;
     }
 
-    .download-section {
+    .crest-section {
         padding: 125px 0;
     }
 
