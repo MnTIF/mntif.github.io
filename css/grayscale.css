@@ -377,6 +377,20 @@ a:focus {
     width: 100%;
     height: 200px;
 }
+#team h2 {
+    margin:10px 0;
+}
+
+#team p{ 
+    font-size: 18px;
+}
+
+#team img{
+    display:block;
+    max-width:250px;
+    max-height:250px;
+    margin:auto;
+}
 
 @media(min-width:767px) {
     .content-section {
