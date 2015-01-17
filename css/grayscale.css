@@ -277,6 +277,11 @@ a:focus {
     -moz-animation-timing-function: linear;
 }
 
+.btn-black {
+    color: #000;
+    background-color: #000;
+}
+
 @-webkit-keyframes pulse {    
     0 {
         -webkit-transform: scale(1);
