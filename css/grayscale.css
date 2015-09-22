@@ -372,6 +372,15 @@ a:focus {
     background-color: rgba(255, 255, 255, 1);
     color: rgba(0 , 0, 0, 1);
 }
+.white a {
+    color: rgba(21, 40, 69, 1);
+}
+
+.white a:hover,
+.white a:focus {
+    text-decoration: none;
+    color: rgba(143, 54, 57, 1);
+}
 
 .blue {
     background-color: rgba(21, 40, 69, 1);  
