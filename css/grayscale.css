@@ -360,6 +360,12 @@ a:focus {
     padding: 60px;   
 }
 
+.question-title {
+    font-style: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
 .red {
     background-color: rgba(143, 54, 57, 1);
 }
