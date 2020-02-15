@@ -346,6 +346,18 @@ a:focus {
     -o-background-size: cover;   
 }
 
+.spring-section{
+    width: 100%;
+    color: #fff;
+    padding: 100px 0;
+    background: url(../img/LOVE.jpg) no-repeat center center scroll;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;   
+}
+
 #crest, #apply {
     padding: 0;
 }
