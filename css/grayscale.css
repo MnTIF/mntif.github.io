@@ -602,21 +602,6 @@ body {
     webkit-tap-highlight-color: rgba(255,255,255,.2);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .wrap-collabsible {
   margin-bottom: 1.2rem 0;
 }
@@ -687,5 +672,5 @@ input[type='checkbox'] {
   border-bottom: 1px solid rgba(250, 224, 66, .45);
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
-  padding: .5rem 1rem;
+
 }
