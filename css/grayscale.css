@@ -358,6 +358,11 @@ a:focus {
     -o-background-size: cover;   
 }
 
+.logos{
+    width:75%;
+    padding: 50
+}
+
 #crest, #apply {
     padding: 0;
 }
