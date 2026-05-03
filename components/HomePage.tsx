@@ -12,7 +12,7 @@ export function HomePage() {
               <div className="col-md-12">
                 <div className="brand-logo" />
                 <p className="intro-text">
-                  Seed-stage cash grants and venture deployment for University of Pennsylvania
+                  Seed-stage cash grants and venture deployments for University of Pennsylvania
                   startups.
                   <br />
                   Managed by students in the Jerome Fisher Management and Technology Program.
