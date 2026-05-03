@@ -1,104 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <!-- added cache control -->
-        <meta http-equiv="cache-control" content="max-age=0" />
-        <meta http-equiv="cache-control" content="no-cache" />
-        <meta http-equiv="expires" content="0" />
-        <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
-        <meta http-equiv="pragma" content="no-cache" />
-        <!-- end cache control -->
-        <title>Jerome Fisher M&T Innovation Fund</title>
-        <!-- favicon, put in img folder -->
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <!-- Bootstrap Core CSS -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-
-        <!-- Custom CSS -->
-        <link href="css/grayscale.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.min.css" rel="stylesheet">
-        <!-- Custom Fonts -->
-        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-        <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-        <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-    </head>
-    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-        <!-- Navigation -->
-        <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                    </button>
-                    <a class="navbar-brand page-scroll" href="/index.html#page-top">
-                        <div class="navbar-image"></div><div class="navbar-text">Menu</div>
-                    </a>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                    <ul class="nav navbar-nav">
-                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                        <li class="hidden">
-                            <a href="#page-top"></a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="index.html#about">About</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="index.html#portfolio">Portfolio</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="index.html#apply">Apply</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="index.html#team">Team</a>
-                        </li>
-                        <li>
-                             <a href="/blog.html">Blog</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="index.html#contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-            </div>
-            <!-- /.container -->
-        </nav>
-        <!-- Intro Header -->
-        <header class="intro">
-            <div class="intro-body">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="brand-logo"></div>
-                            <!-- <h1 class="brand-heading">The Jerome Fisher M&T<br>Innovation Fund</h1> -->
-                            <p class="intro-text">Written by members of our team, this blog highlights events and opportunities in MTIF.</p>
-                            <a href="#about" class="btn btn-circle page-scroll">
-                                <i class="fa fa-angle-double-down animated"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- Blog #1 -->
-        <section id="about" class="container content-section text-center red">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h1>Dr Jeffrey Babin: Transitioning from student entrepreneur to full-fledged entrepreneur</h1>
+/** Article body HTML migrated from legacy blog.html */
+export const blogPostHtml = `
+<h1>Dr Jeffrey Babin: Transitioning from student entrepreneur to full-fledged entrepreneur</h1>
 <p><strong>&nbsp;</strong></p>
 <p>Dr Babin is Practice Professor and Associate Director of the <em>Engineering Entrepreneurship Program</em>. On campus, Dr Babin is an advisor for the <em>Wharton Venture Initiative Program </em>(<em>VIP</em>) and an entrepreneurial fellow for the <em>Weiss Tech House</em>. He has significant entrepreneurial experience as a founder and Managing Director of <em>Antiphony Partners LLC</em>, a strategic consulting firm that helps companies create sustainable value through innovation.</p>
 <p>On 11/22/19, <em>M&amp;T Innovation Fund</em> held a Q&amp;A panel with Dr Babin discussing the transition from a student entrepreneur to a professional entrepreneur, and the entrepreneurial opportunities available at Penn.</p>
@@ -163,6 +65,4 @@
 <p>One thing that we are not good at Penn is centralization. While there is no centralized list, many accelerators have a list of their portfolio companies. <em>M&amp;T Innovation Fund</em> has a list of our portfolio companies over the past 5 years. <em>Weiss Fund</em> has startup data for the past 6 years, <em>VIP</em> has startup data for the past 15 years. But there is definitely room for improvement.</p>
 <p>If we were to assign every startup a unique key field, then we would be able to collect data on all their activity. But that requires funding and data support. If you want to work on the data side, contact Dr Babin.</p>
 <p>&nbsp;</p>
-                </div>
-            </div>
-        </section>
+`
