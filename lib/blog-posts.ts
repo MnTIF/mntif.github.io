@@ -1,5 +1,12 @@
-/** Article body HTML migrated from legacy blog.html */
-export const blogPostHtml = `
+export type BlogPost = {
+  slug: string
+  date: string
+  title: string
+  summary: string
+  html: string
+}
+
+const babinHtml = `
 <h1>Dr Jeffrey Babin: Transitioning from student entrepreneur to full-fledged entrepreneur</h1>
 <p><strong>&nbsp;</strong></p>
 <p>Dr Babin is Practice Professor and Associate Director of the <em>Engineering Entrepreneurship Program</em>. On campus, Dr Babin is an advisor for the <em>Wharton Venture Initiative Program </em>(<em>VIP</em>) and an entrepreneurial fellow for the <em>Weiss Tech House</em>. He has significant entrepreneurial experience as a founder and Managing Director of <em>Antiphony Partners LLC</em>, a strategic consulting firm that helps companies create sustainable value through innovation.</p>
@@ -18,24 +25,7 @@ export const blogPostHtml = `
 <p><strong><em>Tangen Hall.</em></strong></p>
 <p>Tangen Hall is a student entrepreneurship hub that will finish construction in Fall 2020. All entrepreneurship facilities will move to Tangen Hall thereafter.</p>
 <p>Most of the first floor will be a maker space (managed by SEAS) open to all students. A commercial kitchen and retail space for student businesses will also be present.</p>
-<table>
-<tbody>
-<tr>
-<td width="628">
-<table width="100%">
-<tbody>
-<tr>
-<td>
-<p>Tangen Hall</p>
-</td>
-</tr>
-</tbody>
-</table>
-&nbsp;</td>
-</tr>
-</tbody>
-</table>
-<p>Even though students these days are more remotely-located, there is value to being concentrated in one area. For example, Dr Babin was once asked how to meet an engineer by a Wharton student! This issue will no longer persist as all students will have 24x7 access to the building.&nbsp;&nbsp; &nbsp;</p>
+<p>Even though students these days are more remotely-located, there is value to being concentrated in one area. For example, Dr Babin was once asked how to meet an engineer by a Wharton student! This issue will no longer persist as all students will have 24x7 access to the building.</p>
 <p><strong><em>Future VIP plans.</em></strong></p>
 <p>There is <em>VIP</em> in San Francisco, but not here for Penn alumni. That will be changed so that alumni and students can be better connected in the future.</p>
 <p><strong><em>Advice for getting co-founders.</em></strong></p>
@@ -48,11 +38,11 @@ export const blogPostHtml = `
 <p><strong><em>It is hard to develop student businesses because of rigorous courses. Further, students often assume that others must have the same idea. What is your perspective?</em></strong></p>
 <p>Let&rsquo;s look at it less as horse-ahead-of-the-cart. If you ask the question: should I make a startup or get a job, you should get a job. If you are invested in your idea and are worried about it going away, then you should follow your startup.</p>
 <p><strong><em>What should we do about investors that look for more-experienced individuals?</em></strong></p>
-<p>Investors are more concerned about whether we will get tired of our startup as we are so young and often have different opportunities.&nbsp;</p>
+<p>Investors are more concerned about whether we will get tired of our startup as we are so young and often have different opportunities.</p>
 <p>Some investors only look for grey hair-don&rsquo;t pitch to them. But you can get over being young very quickly if you prove yourself.</p>
 <p><strong><em>User-testing among friends. Bias and very homogenous. How to find a good group for user-testing.</em></strong></p>
 <p>You can use social media to beta test for very little money. Almost everyone at Penn can arm-twist themselves to 100 users (friends to friends). However, you cannot get up to 5000 users by arm-twisting; direct sales are not feasible for scaling. Your product needs to generate positive word-of-mouth; your friends themselves cannot spread your idea if your idea isn&rsquo;t up to scratch.</p>
-<p><strong>Never demo your product</strong>. Give it to your friend and let them figure out what to do. If they don&rsquo;t get what to do, then you need to redesign your UI. This was <em>Apple</em>&rsquo;s philosophy when developing the Macintosh and iPhone. &nbsp;</p>
+<p><strong>Never demo your product</strong>. Give it to your friend and let them figure out what to do. If they don&rsquo;t get what to do, then you need to redesign your UI. This was <em>Apple</em>&rsquo;s philosophy when developing the Macintosh and iPhone.</p>
 <p><strong><em>Laws and regulations.</em></strong></p>
 <p>Don&rsquo;t break laws or do anything that can result in a call to the Dean or President. For example, <em>Just 3D Print It</em> was a Penn startup that 3D printed public models and resold them to consumers.</p>
 <p>They also listed Dr Babin as an ambassador, despite never having spoken to him about this matter. Campus ambassador programs are very good, but one should exercise caution when adding someone to their startup.</p>
@@ -64,5 +54,19 @@ export const blogPostHtml = `
 <p><strong><em>Is there a list of all Penn startups?</em></strong></p>
 <p>One thing that we are not good at Penn is centralization. While there is no centralized list, many accelerators have a list of their portfolio companies. <em>M&amp;T Innovation Fund</em> has a list of our portfolio companies over the past 5 years. <em>Weiss Fund</em> has startup data for the past 6 years, <em>VIP</em> has startup data for the past 15 years. But there is definitely room for improvement.</p>
 <p>If we were to assign every startup a unique key field, then we would be able to collect data on all their activity. But that requires funding and data support. If you want to work on the data side, contact Dr Babin.</p>
-<p>&nbsp;</p>
 `
+
+export const BLOG_POSTS: BlogPost[] = [
+  {
+    slug: '2019-11-22-babin',
+    date: '2019-11-22',
+    title: 'Dr Jeffrey Babin: Transitioning from student entrepreneur to full-fledged entrepreneur',
+    summary:
+      'Q&A panel with Dr Babin on Penn entrepreneurship programs, Tangen Hall, VIP, co-founder equity, and user testing.',
+    html: babinHtml,
+  },
+]
+
+export function getPost(slug: string): BlogPost | undefined {
+  return BLOG_POSTS.find((p) => p.slug === slug)
+}

@@ -1,40 +1,46 @@
-import { Nav } from '@/components/Nav'
-import { Footer } from '@/components/Footer'
-import { blogPostHtml } from '@/lib/blog-post-html'
+import Link from 'next/link'
+import { BLOG_POSTS } from '@/lib/blog-posts'
 
-export default function BlogPage() {
+export default function BlogIndexPage() {
+  const posts = [...BLOG_POSTS].sort((a, b) => b.date.localeCompare(a.date))
+
   return (
-    <>
-      <Nav variant="subpage" />
-      <header className="intro">
-        <div className="intro-body">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-12">
-                <div className="brand-logo" />
-                <p className="intro-text">
-                  Written by members of our team, this blog highlights events and opportunities in
-                  MTIF.
-                </p>
-                <a href="#about" className="btn btn-circle page-scroll">
-                  <i className="fa fa-angle-double-down animated" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div className="term-shell">
+      <header className="term-head" role="banner">
+        <Link className="term-brand" href="/">
+          <span className="term-brand-prompt">mtif</span>
+          <span className="term-brand-sep">:</span>
+          <span className="term-brand-path">~/blog</span>
+          <span className="term-brand-sep">$</span>
+        </Link>
+        <nav className="term-chips" aria-label="Navigation">
+          <Link href="/" className="term-chip">
+            home
+          </Link>
+        </nav>
       </header>
-      <section id="about" className="container content-section text-center red">
-        <div className="row">
-          <div className="col-lg-8 col-lg-offset-2">
-            <div
-              className="blog-article"
-              dangerouslySetInnerHTML={{ __html: blogPostHtml }}
-            />
-          </div>
-        </div>
-      </section>
-      <Footer />
-    </>
+
+      <main className="blog-shell">
+        <header className="blog-hero">
+          <h1>Field notes.</h1>
+          <p>
+            Conversations, event notes, and venture-building observations from
+            the M&amp;T Innovation Fund community.
+          </p>
+        </header>
+
+        <ul className="blog-index">
+          {posts.map((post) => (
+            <li key={post.slug} className="blog-index-item">
+              <Link href={`/blog/${post.slug}/`}>
+                <span className="blog-index-date">{post.date}</span>
+                <span className="blog-index-title">{post.title}</span>
+                <span className="blog-index-summary">{post.summary}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </main>
+    </div>
   )
 }
