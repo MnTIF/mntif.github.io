@@ -188,6 +188,7 @@ export function Terminal() {
           setTheme,
           theme,
           navigate,
+          history,
         })
         const entryId = ++idRef.current
         setEntries((entries) => [

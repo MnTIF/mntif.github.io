@@ -44,8 +44,8 @@ const AboutFile = () => (
     </p>
     <h2 className="term-h2">{"// who can apply"}</h2>
     <p className="term-para term-para--dim">
-      Anyone in the Penn ecosystem is eligible: undergrads, MBA and master's
-      students, PhDs, and faculty. If you're building something at Penn, we
+      Anyone in the Penn ecosystem is eligible: undergrads, MBA and master&apos;s
+      students, PhDs, and faculty. If you&apos;re building something at Penn, we
       want to hear from you.
     </p>
     <h2 className="term-h2">{"// what we offer"}</h2>
