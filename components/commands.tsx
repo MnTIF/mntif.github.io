@@ -25,6 +25,8 @@ export type CmdCtx = {
   theme: Theme
   navigate: (href: string) => void
   history: string[]
+  startTour?: () => void
+  openGuide?: () => void
 }
 
 export type Command = {
@@ -74,8 +76,8 @@ function HelpOutput({ commands }: { commands: Command[] }) {
           ))}
       </ul>
       <p className="term-line term-line--dim" style={{ marginTop: '1rem' }}>
-        Tip: <kbd>/</kbd> opens the slash menu &middot; <kbd>?</kbd> shows this
-        help &middot; <kbd>&uarr;</kbd>/<kbd>&darr;</kbd> for history.
+        Tip: <kbd>tour</kbd> teaches the terminal &middot; <kbd>guide</kbd> opens
+        a menu &middot; <kbd>/</kbd> opens shortcuts.
       </p>
     </div>
   )
@@ -87,6 +89,24 @@ export const COMMANDS: Command[] = [
     summary: 'list available commands and filesystem',
     usage: 'help',
     run: () => <HelpOutput commands={COMMANDS} />,
+  },
+  {
+    name: 'tour',
+    summary: 'animated walkthrough of terminal basics',
+    usage: 'tour',
+    run: (_args, ctx) => {
+      ctx.startTour?.()
+      return <p className="term-line term-line--dim">starting terminal tour...</p>
+    },
+  },
+  {
+    name: 'guide',
+    summary: 'open a selectable menu of things to view',
+    usage: 'guide',
+    run: (_args, ctx) => {
+      ctx.openGuide?.()
+      return <p className="term-line term-line--dim">opening guide menu...</p>
+    },
   },
   {
     name: '?',
@@ -311,6 +331,24 @@ export const COMMANDS: Command[] = [
     run: () => <HelpOutput commands={COMMANDS} />,
   },
   {
+    name: '/tour',
+    summary: 'start the terminal walkthrough',
+    usage: '/tour',
+    run: (_a, ctx) => {
+      ctx.startTour?.()
+      return <p className="term-line term-line--dim">starting terminal tour...</p>
+    },
+  },
+  {
+    name: '/guide',
+    summary: 'open the beginner guide menu',
+    usage: '/guide',
+    run: (_a, ctx) => {
+      ctx.openGuide?.()
+      return <p className="term-line term-line--dim">opening guide menu...</p>
+    },
+  },
+  {
     name: '/clear',
     summary: "alias for 'clear'",
     hidden: true,
@@ -358,4 +396,3 @@ export function findCommand(name: string): Command | null {
   if (name === '?') return COMMANDS.find((c) => c.name === '?') ?? null
   return COMMANDS.find((c) => c.name === name) ?? null
 }
-
